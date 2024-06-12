@@ -17,6 +17,8 @@
             Longitud de myText: {{ myText|length }}
             <br>
             Fecha formateada: {{ myDate|date:"D d M Y" }}
+            <br>
+            Tiempo desde la fecha: {{ myDate|timesince }}
         </p>
         <ul>
             {% for myItem in myList %}
