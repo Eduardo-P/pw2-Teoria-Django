@@ -26,6 +26,8 @@
                     - Este número está entre 20 y 30 (inclusive)
                 {% elif myItem != 42 %}
                     - Este número no es 42
+                {% elif myItem not in specialNumbers %}
+                    - Este número no está en la lista especial
                 {% endif %}
                 </li>
             {% endfor %}
