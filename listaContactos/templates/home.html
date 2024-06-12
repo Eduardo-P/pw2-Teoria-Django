@@ -15,7 +15,10 @@
         </p>
         <ul>
             {% for myItem in myList %}
-                <li>{{forloop.counter}} - {{ myItem }}</li>
+                <li>
+                    Iteración: {{forloop.counter}}<br>
+                    Iteración (comienza en 0): {{ forloop.counter0 }}<br>
+                </li>
             {% endfor %}
         </ul/>
         {% endblock %}
