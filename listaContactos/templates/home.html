@@ -13,6 +13,9 @@
             {{myText|upper}},
             {{myNumber}}
         </p>
+        <p>
+            Longitud de myText: {{ myText|length }}
+        </p>
         <ul>
             {% for myItem in myList %}
                 <li>{{forloop.counter}} - {{ myItem }}
