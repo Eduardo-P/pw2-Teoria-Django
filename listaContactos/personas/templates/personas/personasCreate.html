@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+#
+<!-- Se realiza la solicitud POST cuando un usuario envía el formulario a la misma URL 'add' -->
 <form action='add' method='POST'> {% csrf_token %}
     <input type='text' name='q' placeholder='buscar'/>
     <input type='submit' value='Buscar'/>

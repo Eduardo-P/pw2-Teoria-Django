@@ -23,6 +23,7 @@ from personas.views import personaTestView, personaCreateView, searchForHelp
 urlpatterns = [
     path('', myHomeView, name='PaginaInicio'),
     path('people', personaTestView, name='personas'),
+    #Se realiza la solicitud GET cuando un usuario accede por primera vez a la URL 'add' llamando a la vista 'personaCreateView'
     path('add', personaCreateView, name='AgregarPersonas'),
     path('search', searchForHelp, name='buscar'),
     path('another', anotherView, name='otra'),
