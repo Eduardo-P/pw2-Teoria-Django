@@ -24,6 +24,8 @@
                     - Este número es menor que 10
                 {% elif myItem >= 20 and myItem <= 30 %}
                     - Este número está entre 20 y 30 (inclusive)
+                {% elif myItem != 42 %}
+                    - Este número no es 42
                 {% endif %}
                 </li>
             {% endfor %}
