@@ -21,6 +21,8 @@
             Fecha formateada: {{ myDate|date:"D d M Y" }}
             <br>
             Tiempo desde la fecha: {{ myDate|timesince }}
+            <br>
+            Valor por defecto: {{ variableNula|default:"Valor por defecto" }}
         </p>
         <ul>
             {% for myItem in myList %}

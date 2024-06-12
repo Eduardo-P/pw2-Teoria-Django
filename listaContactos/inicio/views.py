@@ -9,6 +9,7 @@ def myHomeView(request, *args, **kwargs):
         'myNumber': 123,
         'myList': [33, 44, 55],
         'myDate': datetime(2023, 1, 1, 12, 0),
+        'variableNula': None,
         }
     return render(request, "home.html" , myContext)
 
