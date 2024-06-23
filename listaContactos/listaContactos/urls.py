@@ -18,12 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import anotherView
-from personas.views import personaTestView, personaCreateView, searchForHelp, personasAnotherCreateView
+from personas.views import personaTestView, personaCreateView1, searchForHelp, personasAnotherCreateView
 
 urlpatterns = [
     path('', myHomeView, name='PaginaInicio'),
     path('people', personaTestView, name='personas'),
-    path('add', personaCreateView, name='AgregarPersonas'),
+    path('add', personaCreateView1, name='AgregarPersonas'),
     path('anotherAdd', personasAnotherCreateView, name='OtroAgregarPersonas'),
     path('search', searchForHelp, name='buscar'),
     path('another', anotherView, name='otra'),

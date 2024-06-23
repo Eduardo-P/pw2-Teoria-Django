@@ -4,12 +4,19 @@ from .models import Persona
 class PersonaForm(forms.ModelForm):
     class Meta:
         model = Persona
-        fields = {
+        fields = [
             'nombres',
             'apellidos',
             'edad',
-            #'donador',
-            }
+            'donador',
+            ]
+    def clean_nombres(selt, *args, **kwargs):
+        print('paso')
+        name = selt.cleaned_data.get('nombres')
+        if name.istitle():
+            return name
+        else:
+            raise forms.ValidationError('La primera letra en mayúscula')
 
 class RawPersonaForm(forms.Form):
     nombres = forms.CharField(
