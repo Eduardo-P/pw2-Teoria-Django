@@ -18,13 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import anotherView
-from personas.views import personaTestView, personaCreateView, searchForHelp
+from personas.views import personaTestView, personaCreateView, searchForHelp, personasAnotherCreateView
 
 urlpatterns = [
     path('', myHomeView, name='PaginaInicio'),
     path('people', personaTestView, name='personas'),
     #Se realiza la solicitud GET cuando un usuario accede por primera vez a la URL 'add' llamando a la vista 'personaCreateView'
     path('add', personaCreateView, name='AgregarPersonas'),
+    path('anotherAdd', personasAnotherCreateView, name='OtroAgregarPersonas'),
     path('search', searchForHelp, name='buscar'),
     path('another', anotherView, name='otra'),
     path('admin/', admin.site.urls),
