@@ -11,14 +11,14 @@ def personaTestView(request):
     return render(request, 'personas/descripcion.html', context)
 
 def personaCreateView1(request):
-    form = PersonaForm(request.POST or None)
+    obj = Persona.objects.get(id = 2)
+    form = PersonaForm(request.POST or None, instance = obj)
     if form.is_valid():
         form.save()
         form = PersonaForm()
-        
     context = {
         'form': form
-    }
+        }
     return render(request, 'personas/personasCreate.html', context)
 
 def personaCreateView2(request):
