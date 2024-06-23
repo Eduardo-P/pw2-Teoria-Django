@@ -25,6 +25,7 @@ from personas.views import (
     searchForHelp,
     personasAnotherCreateView,
     personasListView,
+    personasDeleteView,
     )
 
 urlpatterns = [
@@ -37,4 +38,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('personas/<int:myID>/', personasShowObject, name = 'browsing'),
     path('personas/', personasListView, name = 'listing'),
+    path('personas/<int:myID>/delete/', personasDeleteView, name = 'deleting'),
 ]
