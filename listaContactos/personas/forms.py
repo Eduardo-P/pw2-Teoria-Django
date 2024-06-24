@@ -26,6 +26,15 @@ class PersonaForm(forms.ModelForm):
         if not surname.isalpha():
             raise forms.ValidationError('Los apellidos no deben contener números ni caracteres especiales.')
         return surname
+    
+    def clean_edad(self):
+        age = self.cleaned_data.get('edad')
+        if age is not None:
+            if age < 0:
+                raise forms.ValidationError('La edad no puede ser un número negativo.')
+            if age > 120:
+                raise forms.ValidationError('La edad no puede ser mayor de 120 años.')
+        return age
 
 class RawPersonaForm(forms.Form):
     nombres = forms.CharField(
